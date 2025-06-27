@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Eclipse</title>
+    <style>
+    body {
+    background-color: rgb(13, 13, 13);
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 817px; 
+    position: relative; 
+    }
+.moon{
+    position: relative;
+    width: 340px; 
+    height: 340px;
+    top:40%;
+    left:0px;
+    margin-right: 50%;
+    background-color:rgb(107, 107, 102);
+    border-radius: 50%;
+    animation-duration:15s;
+    border: 3px solid black;
+    box-shadow: 0px 0px 10px 10px inset;
+    animation-timing-function:ease-out;
+    animation-iteration-count:infinite;
+    animation-name: anime;
+    animation-delay: 2s;
+}
+@keyframes anime
+{
+    0%{background-color: rgb(107, 107, 102); left: 0px; top:0px; rotate: 180deg;} 
+    100%{background-color:black;left:595px; top:0px; rotate: 180deg;} 
+}
+.sun{
+    position: absolute;
+    width: 340px;
+    height: 340px; 
+    top:30%;
+    right:30%;
+    border-radius: 50%;
+     background: radial-gradient(
+                rgba(255, 200, 0, 0.8) 0%, 
+                rgba(255, 150, 0, 0.6) 20%,
+                rgba(255, 100, 0, 0.4) 40%,
+                rgba(255, 50, 0, 0) 70% 
+            );
+    box-shadow: 
+        0 0 60px 30px rgba(255, 165, 0, 0.5), 
+        0 0 100px 50px rgba(255, 165, 0, 0.3), 
+        0 0 180px 90px rgba(255, 165, 0, 0.1); 
+     z-index: 1;  
+}
+.star {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8); /* White with some transparency */
+    border-radius: 50%; /* Make them circular */
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5), 0 0 10px 5px rgba(170, 200, 255, 0.3); /* Subtle glow */
+    animation: star-drift linear infinite; /* All stars drift */
+    will-change: transform, opacity; /* Optimize performance */
+}
+.s1 { width: 3px; height: 3px; top: 10%; left: 15%; animation-duration: 25s; animation-delay: 0s; }
+.s2 { width: 4px; height: 4px; top: 30%; left: 80%; animation-duration: 30s; animation-delay: 5s; }
+.s3 { width: 2px; height: 2px; top: 5%; left: 50%; animation-duration: 20s; animation-delay: 2s; }
+.s4 { width: 5px; height: 5px; top: 70%; left: 5%; animation-duration: 35s; animation-delay: 2s; }
+.s5 { width: 3px; height: 3px; top: 85%; left: 40%; animation-duration: 28s; animation-delay: 1s; }
+.s6 { width: 4px; height: 4px; top: 20%; left: 70%; animation-duration: 22s; animation-delay: 10s; }
+.s7 { width: 2px; height: 2px; top: 60%; left: 90%; animation-duration: 32s; animation-delay: 3s; }
+.s8 { width: 5px; height: 5px; top: 40%; left: 25%; animation-duration: 27s; animation-delay: 6s; }
+.s9 { width: 3px; height: 3px; top: 55%; left: 60%; animation-duration: 24s; animation-delay: 9s; }
+.s10 { width: 4px; height: 4px; top: 90%; left: 75%; animation-duration: 30s; animation-delay: 4s; }
+.s11 { width: 2px; height: 2px; top: 15%; left: 5%; animation-duration: 26s; animation-delay: 7s; }
+.s12 { width: 5px; height: 5px; top: 75%; left: 95%; animation-duration: 33s; animation-delay: 12s; }
+.s13 { width: 3px; height: 3px; top: 45%; left: 10%; animation-duration: 29s; animation-delay: 6s; }
+.s14 { width: 4px; height: 4px; top: 25%; left: 40%; animation-duration: 21s; animation-delay: 4s; }
+.s15 { width: 2px; height: 2px; top: 80%; left: 20%; animation-duration: 31s; animation-delay: 8s; }
+.s16 { width: 2px; height: 2px; top: 67%; left: 89%; animation-duration: 31s; animation-delay: 8s; }
+.s17 { width: 2px; height: 2px; top: 22%; left: 86%; animation-duration: 31s; animation-delay: 9s; }
+.s18 { width: 2px; height: 2px; top: 56%; left: 98%; animation-duration: 31s; animation-delay: 4s; }
+.s19 { width: 2px; height: 2px; top: 89%; left: 32%; animation-duration: 31s; animation-delay: 1s; }
+.s20 { width: 2px; height: 2px; top: 78%; left: 12%; animation-duration: 31s; animation-delay: 3s; }
+
+@keyframes star-drift {
+    0% {
+        transform: translate(0, 0) scale(0.8);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translate(10vw, -10vh) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(20vw, 20vh) scale(0.9);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translate(30vw, -30vh) scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(40vw, 40vh) scale(0.8);
+        opacity: 0.3;
+    }
+}
+    </style>
+</head>
+<body>
+        <div class="sun"></div>
+        <div class="moon"></div>
+        <div class="star s1"></div>
+        <div class="star s2"></div>
+        <div class="star s3"></div>
+        <div class="star s4"></div>
+        <div class="star s5"></div>
+        <div class="star s6"></div>
+        <div class="star s7"></div>
+        <div class="star s8"></div>
+        <div class="star s9"></div>
+        <div class="star s10"></div>
+        <div class="star s11"></div>
+        <div class="star s12"></div>
+        <div class="star s13"></div>
+        <div class="star s14"></div>
+        <div class="star s15"></div>
+        <div class="star s16"></div>
+        <div class="star s17"></div>
+        <div class="star s18"></div>
+        <div class="star s19"></div>
+        <div class="star s20"></div>
+        </div>
+        
+<script>
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', function(event) {
+            let tiltX = event.beta;  
+            let tiltY = event.gamma; 
+
+            
+            const maxRotation = 15; 
+            let rotateX = (tiltX / 180) * maxRotation; 
+            let rotateY = (tiltY / 90) * maxRotation;
+
+            document.body.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+    } else {
+        console.warn("DeviceOrientationEvent is not supported on this browser.");
+    }
+</script>
+    </body>
+    </html>
